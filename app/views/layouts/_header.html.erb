@@ -1,0 +1,19 @@
+<header class="mainhead">
+  <div class="row">
+    <div class="nav-brand col-md-1 col-md-offset-1">
+      <h1><%= link_to'Tester', root_path %></h1>
+    </div>
+    <div class="links col-md-4 col-md-offset-5"><br>
+      <%= link_to 'new post', new_post_path %>
+      <%= link_to 'view posts', posts_path %>
+
+      <% if user_signed_in? %>
+        <%= link_to "Welcome, #{current_user.email}" %>
+        <%= link_to 'Sign out', destroy_user_session_path, :method => :delete %>
+      <% else %>
+        <%= link_to 'Sign in', new_user_session_path %>
+        <%= link_to 'Sign up', new_user_registration_path %>
+      <% end %>
+    </div>
+  </div>
+</header>

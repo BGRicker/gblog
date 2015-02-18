@@ -1,0 +1,19 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.mainhead{
+  border: 1px solid black;
+}
+
+.mainhead .links a {
+  float:none;
+  vertical-align:middle;
+}
+
+.lastpost th {
+  padding: 5px 5px 0px 5px;
+}
+
+.lastpost td {
+  padding: 5px 5px 0px 5px;
+}
