@@ -4,6 +4,4 @@
   <%= link_to "Like", post_likes_path(@post), method: :post, remote: true %> <!-- allows JS response -->
 <% end %>
 
-<% @post.likes.each do |like| %>
-
-<% end %>
+<%= @post.likes.count %>

@@ -1,6 +1,8 @@
 
-<h3><%= @user.email %><br><br></h3>
+<h3><%= @user.email %><br></h3>
+<h4>Total Likes: <%= @all_likes %></h4><br>
 
 <% @user.posts.each do |post| %>
 <h4><%= link_to post.title, post_path(post) %></h4>
+    <h5>Likes: <%= post.likes.count %></h5>
 <% end %>
