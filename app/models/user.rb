@@ -8,6 +8,6 @@ class User < ActiveRecord::Base
 
   def likes?(post)
    post.likes.where(user_id: id).any?
- end
- 
+  end
+
 end
