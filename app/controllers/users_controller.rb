@@ -7,6 +7,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @username = @user.email.split("@")[0] # OR @user.email[/[^@]+/]
     @all_likes = @user.likes.count
   end
 
