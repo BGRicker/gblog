@@ -4,9 +4,9 @@
 <h3>Title: <%= @last.title %> </h3> <h6>(<%= @last.category %>)</h6><br>
 <h4>  <%= @last.content %> <br> </h5>-->
 
-<% @posts.order('id ASC').each do |post| %>
+<% @posts.order('likes_count DESC').each do |post| %>
   <h3><%= link_to post.title, post_path(post) %><br></h3>
   <h4><%= post.category %><br></h4>
   <h4><%= post.content %></h4>
-  <h4>Likes: <%= post.likes.count %></h4><br><br>
+  <h4>Likes: <%= post.likes_count %></h4><br><br>
 <% end %>
